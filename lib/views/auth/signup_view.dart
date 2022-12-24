@@ -10,6 +10,7 @@ class SignupView extends GetWidget<AuthController> {
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -188,7 +189,7 @@ class SignupView extends GetWidget<AuthController> {
                             const Text('Already have an account?'),
                             TextButton(
                               onPressed: () {
-                                Get.offNamed('/');
+                                Get.offNamed('/login');
                               },
                               child: const Text('Sign In', style: TextStyle(color: Color(0xffCC9D76))),
                             ),
