@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 import '../repository/local_storage_data.dart';
+import '../repository/sql_helper.dart';
+
 
 class ProfileController extends GetxController {
 
@@ -15,6 +17,8 @@ class ProfileController extends GetxController {
 
   UserModel? _userModel;
   UserModel get userModel => _userModel!;
+
+
 
   @override
   void onInit() async {
@@ -30,6 +34,7 @@ class ProfileController extends GetxController {
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
     await _localStoragedata.removeUser();
+    await SqlHelper().deleteAllData();
   }
 
   getCurrentUser() async {

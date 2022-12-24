@@ -56,6 +56,11 @@ class SqlHelper{
     await dbClient.delete('Cart', where: 'id = ?', whereArgs: [cartItemModel.id]);
   }
 
+  deleteAllData() async {
+    var dbClient = await db;
+    await dbClient.delete('Cart');
+  }
+
   //
   // readData(String table, {bool? distinct, List<String>? columns, String? where, List<Object?>? whereArgs, String? groupBy, String? having, String? orderBy, int? limit, int? offset}) async {
   //   Database? dbClient = await db;
