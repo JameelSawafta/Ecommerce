@@ -188,7 +188,7 @@ class CartView extends StatelessWidget {
                                 children: [
                                    Text('SHIPPING', style: TextStyle(color: Color(0xffF7F7F7), fontSize: 14)),
                                   const Spacer(),
-                                   Text('€ 100', style: TextStyle(color: Colors.white, fontSize: 14)),
+                                   Text('--', style: TextStyle(color: Colors.white, fontSize: 14)),
                                 ],
                               ),
                               const SizedBox(height: 20),
